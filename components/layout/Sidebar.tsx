@@ -40,7 +40,7 @@ export function Sidebar() {
                     <div className="w-8 h-8 rounded-full bg-accent flex items-center justify-center text-white">
                         <ShieldAlert size={18} />
                     </div>
-                    <span>Valid.AI NETRA</span>
+                    <span>NETRA AI</span>
                 </div>
             </div>
 
