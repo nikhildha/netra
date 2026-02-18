@@ -1,6 +1,7 @@
 "use client";
 
 import { GovtAlignment } from "@/components/pitch/GovtAlignment";
+import { SovereignShield } from "@/components/pitch/SovereignShield";
 
 export default function PitchPage() {
     return (
@@ -10,6 +11,10 @@ export default function PitchPage() {
             </div>
 
             <GovtAlignment />
+
+            <div className="mt-12">
+                <SovereignShield />
+            </div>
         </div>
     );
 }

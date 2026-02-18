@@ -10,7 +10,9 @@ import {
     Menu,
     X,
     LayoutDashboard,
-    Presentation
+    Presentation,
+    Sparkles,
+    Search
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useState } from "react";
@@ -19,6 +21,7 @@ const navigation = [
     { name: "Executive Dashboard", href: "/", icon: LayoutDashboard },
     { name: "Surveillance Engine", href: "/strategies", icon: ShieldAlert },
     { name: "Frameworks", href: "/frameworks", icon: Menu }, // Using Menu as a placeholder for "Control" icon, or maybe Cpu/Zap
+    { name: "Our Edge (AI USP)", href: "/ai-advantage", icon: Sparkles },
     { name: "Architecture Map", href: "/architecture", icon: Network },
     { name: "Budget & Roadmap", href: "/plan", icon: FileText },
     { name: "Govt Pitch Deck", href: "/pitch", icon: Presentation },

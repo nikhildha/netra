@@ -2,6 +2,7 @@
 
 import { BudgetCharts } from "@/components/plan/BudgetCharts";
 import { RoadmapTimeline } from "@/components/plan/RoadmapTimeline";
+import { ROISimulator } from "@/components/plan/ROISimulator";
 
 export default function PlanPage() {
     return (
@@ -11,6 +12,10 @@ export default function PlanPage() {
                 <p className="text-sidebar-foreground">
                     Strategic Investment for National Market Integrity
                 </p>
+            </div>
+
+            <div className="mb-8">
+                <ROISimulator />
             </div>
 
             <BudgetCharts />
