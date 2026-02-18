@@ -7,7 +7,7 @@ export function Header() {
         <header className="h-16 bg-header border-b border-border flex items-center justify-between px-6 sticky top-0 z-10 w-full">
             <div className="flex items-center gap-4">
                 <h1 className="text-sm font-bold text-sidebar-foreground/80 uppercase tracking-widest hidden md:block">
-                    Indian Stock Manipulation Surveillance System
+                    National Electronic Tracking & Risk Analysis
                 </h1>
             </div>
 

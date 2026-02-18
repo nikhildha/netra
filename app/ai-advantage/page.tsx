@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { BrainCircuit, Users, Zap, Search, Network, Lock, FileText, Globe, Cpu, TrendingUp, AlertTriangle } from "lucide-react";
+import { BrainCircuit, Users, Zap, Search, Network, Lock, FileText, Globe, Cpu, TrendingUp, AlertTriangle, ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 export default function AIAdvantagePage() {
@@ -158,6 +158,53 @@ export default function AIAdvantagePage() {
                 </div>
             </section>
 
+            {/* Section 3: Operational Edge (Legacy vs NETRA) */}
+            <section>
+                <div className="flex items-center gap-4 mb-8">
+                    <div className="p-3 bg-green-500/10 rounded-xl text-green-400"><TrendingUp size={24} /></div>
+                    <h2 className="text-3xl font-bold text-foreground">Operational Edge: Legacy vs NETRA</h2>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <ComparisonCard
+                        title="Insider Trading Detection"
+                        legacy="Manual Excel Analysis of EOD Data (2-3 Days)"
+                        netra="Real-time Stream Processing (Flink) (10ms)"
+                        gain="250,000x Faster"
+                    />
+                    <ComparisonCard
+                        title="Front Running Identification"
+                        legacy="Post-facto Audit of Trade Logs (End of Quarter)"
+                        netra="Live Complex Event Processing (Real-time)"
+                        gain="Preventive Alerts"
+                    />
+                    <ComparisonCard
+                        title="Pump & Dump Prevention"
+                        legacy="Manual Complaint Monitoring (Post-Collapse)"
+                        netra="AI Social Listening & Sentiment (Pre-Surge)"
+                        gain="Proactive"
+                    />
+                    <ComparisonCard
+                        title="Circular Trading (Shell Companies)"
+                        legacy="Random Sample Audits (Hit or Miss)"
+                        netra="Algorithmic Graph Cycle Detection (100% Capture)"
+                        gain="Zero Escape"
+                    />
+                    <ComparisonCard
+                        title="Evidence Collection"
+                        legacy="Manual Physical Raids & Seizures (Months)"
+                        netra="Cloud Evidence Scraper & NLP (Minutes)"
+                        gain="Rapid Justice"
+                    />
+                    <ComparisonCard
+                        title="Asset Recovery"
+                        legacy="Manual Forensic Accounting (2-3 Months)"
+                        netra="Algorithmic Profit Calculation (Instant)"
+                        gain="Maximize Recovery"
+                    />
+                </div>
+            </section>
+
         </div>
     );
 }
@@ -203,5 +250,32 @@ function SparklesIcon() {
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z" />
         </svg>
+    )
+}
+
+function ComparisonCard({ title, legacy, netra, gain }: { title: string, legacy: string, netra: string, gain: string }) {
+    return (
+        <div className="bg-sidebar border border-border p-6 rounded-xl relative overflow-hidden group hover:border-accent/50 transition-colors">
+            <h4 className="font-bold text-foreground mb-4">{title}</h4>
+
+            <div className="space-y-3 relative z-10">
+                <div className="p-3 bg-destructive/10 border border-destructive/20 rounded-lg">
+                    <div className="text-[10px] text-destructive uppercase font-bold mb-1">Legacy</div>
+                    <div className="text-sm text-sidebar-foreground">{legacy}</div>
+                </div>
+
+                <div className="flex justify-center text-sidebar-foreground/50">
+                    <ArrowRight className="rotate-90 md:rotate-90" size={16} />
+                </div>
+
+                <div className="p-3 bg-success/10 border border-success/20 rounded-lg relative overflow-hidden">
+                    <div className="absolute top-0 right-0 bg-success text-black text-[9px] font-bold px-2 py-0.5 rounded-bl">
+                        {gain}
+                    </div>
+                    <div className="text-[10px] text-success uppercase font-bold mb-1">NETRA AI</div>
+                    <div className="text-sm text-foreground font-medium">{netra}</div>
+                </div>
+            </div>
+        </div>
     )
 }

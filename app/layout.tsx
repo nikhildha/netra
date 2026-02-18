@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Project NETRA | Surveillance System",
-  description: "Indian Stock Manipulation Surveillance System Proposal",
+  description: "National Electronic Tracking & Risk Analysis Proposal",
 };
 
 export default function RootLayout({

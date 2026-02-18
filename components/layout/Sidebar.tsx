@@ -22,6 +22,7 @@ const navigation = [
     { name: "Surveillance Engine", href: "/strategies", icon: ShieldAlert },
     { name: "Frameworks", href: "/frameworks", icon: Menu }, // Using Menu as a placeholder for "Control" icon, or maybe Cpu/Zap
     { name: "Our Edge (AI USP)", href: "/ai-advantage", icon: Sparkles },
+    { name: "Live Investigation", href: "/investigation", icon: Search },
     { name: "Architecture Map", href: "/architecture", icon: Network },
     { name: "Budget & Roadmap", href: "/plan", icon: FileText },
     { name: "Govt Pitch Deck", href: "/pitch", icon: Presentation },
